@@ -6,7 +6,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-6">Welcome to Our App</h1>
       <p className="text-lg mb-6">Click below to explore the dashboard!</p>
       <Link
-        href="/home"
+        href="/produits"
         className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"
       >
         Explore
