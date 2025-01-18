@@ -14,7 +14,7 @@ const Header = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  href="/produits"
+                  href="/home"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
                 >
                   Produits
@@ -30,12 +30,9 @@ const Header = () => {
           </div>
           <div className="ml-auto">
             <div className="ml-4 flex items-center md:ml-6">
-              <a
-                href="login.html"
-                className="mx-3 text-gray-800 hover:text-gray-600"
-              >
+              <Link href="/" className="mx-3 text-gray-800 hover:text-gray-600">
                 <FaSignOutAlt className="inline mr-1" /> Sign Out
-              </a>
+              </Link>
             </div>
           </div>
         </div>
