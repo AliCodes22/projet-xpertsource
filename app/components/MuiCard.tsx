@@ -56,7 +56,7 @@ const MuiCard = ({ id, name, description, image, price }: CardProps) => {
             size="small"
             variant="outlined"
             color="primary"
-            onClick={(id) => {
+            onClick={() => {
               router.push(`/produits/${id}`);
             }}
           >
