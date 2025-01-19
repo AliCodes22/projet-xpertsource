@@ -1,3 +1,7 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 import {
   Box,
   Card,
@@ -7,30 +11,60 @@ import {
   Button,
   CardMedia,
 } from "@mui/material";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
-const MuiCard = () => {
+type CardProps = {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+};
+
+const MuiCard = ({ id, name, description, image, price }: CardProps) => {
+  const router: AppRouterInstance = useRouter();
+
   return (
-    <Box width="300px">
-      <Card>
+    <Box className="w-full max-w-xs h-full hover:shadow-lg transition-shadow duration-300">
+      <Card className="h-full flex flex-col shadow-md hover:shadow-lg  transition-shadow duration-300">
         <CardMedia
           component="img"
-          height="140px"
-          image="https://source.unsplash.com/random"
-          alt="unsplash image"
+          height="180"
+          image={image}
+          alt={name}
+          className="object-cover"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            React
+        <CardContent className="flex-grow">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            className="font-bold"
+          >
+            {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            React is the library for web and native user interfaces. Build user
-            interfaces out of individual pieces called components written in
-            JavaScript.
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            className="line-clamp-2"
+          >
+            {description}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Share</Button>
-          <Button>Learn More</Button>
+        <CardActions className="mt-auto flex justify-between">
+          <Button
+            size="small"
+            variant="outlined"
+            color="primary"
+            onClick={(id) => {
+              router.push(`/produits/${id}`);
+            }}
+          >
+            Details
+          </Button>
+          <Typography variant="body1" className="font-semibold text-green-600">
+            ${price}
+          </Typography>
         </CardActions>
       </Card>
     </Box>

@@ -4,24 +4,28 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-red-100">
+    <header className="bg-black">
       <nav className="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex  h-16 items-center justify-between">
           <div className="flex  items-center">
             <Link href="/">
-              <IconChalkboardUser height={30} width={30} />
+              <IconChalkboardUser
+                height={30}
+                width={30}
+                className="text-neutral-50	"
+              />
             </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  href="/home"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  href="/produits"
+                  className="rounded-md px-3 py-2 text-sm  font-medium text-neutral-50	 hover:bg-gray-700 hover:text-white"
                 >
                   Produits
                 </Link>
                 <a
                   href="/categories"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-neutral-50	 hover:bg-gray-700 hover:text-white"
                 >
                   Categories
                 </a>
@@ -31,7 +35,8 @@ const Header = () => {
           <div className="ml-auto">
             <div className="ml-4 flex items-center md:ml-6">
               <Link href="/" className="mx-3 text-gray-800 hover:text-gray-600">
-                <FaSignOutAlt className="inline mr-1" /> Sign Out
+                <FaSignOutAlt className="inline mr-1 text-neutral-50" />{" "}
+                <span className="text-neutral-50	">Sign Out</span>
               </Link>
             </div>
           </div>
