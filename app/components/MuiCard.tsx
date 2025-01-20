@@ -25,7 +25,7 @@ const MuiCard = ({ id, name, description, image, price }: CardProps) => {
   const router: AppRouterInstance = useRouter();
 
   return (
-    <Box className="w-full max-w-xs h-full hover:shadow-lg transition-shadow duration-300">
+    <Box className="max-w-xs transition duration-300 ease-in-out hover:scale-110">
       <Card className="h-full flex flex-col shadow-md hover:shadow-lg  transition-shadow duration-300">
         <CardMedia
           component="img"
@@ -62,7 +62,7 @@ const MuiCard = ({ id, name, description, image, price }: CardProps) => {
           >
             Details
           </Button>
-          <Typography variant="body1" className="font-semibold text-green-600">
+          <Typography variant="body1" className="font-semibold text-black-600">
             ${price}
           </Typography>
         </CardActions>

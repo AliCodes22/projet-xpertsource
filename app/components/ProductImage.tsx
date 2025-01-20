@@ -9,9 +9,8 @@ const ProductImage = ({ image }: { image: string }) => {
         width={1000}
         height={1000}
         alt="product image"
-        className="min-h-[300px]"
-        object-cover
-        object-center
+        className="min-h-[300px] object-cover
+        object-center"
       />
     </div>
   );

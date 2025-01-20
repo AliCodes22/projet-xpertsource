@@ -1,10 +1,12 @@
 import ProductImage from "@/app/components/ProductImage";
 import ProductPrice from "@/app/components/ProductPrice";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { imageMap } from "@/utils";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 const ProductDetailsPage = async ({
   params,
@@ -36,34 +38,35 @@ const ProductDetailsPage = async ({
             <ProductImage image={imageMap[productData.name]} />
           </div>
           <div className="col-span-2 p-5">
-            <div className="flex flex-col gap-6">
-              <p>
-                {productData.name} {productData.category}
-              </p>
-              <h1 className="h3-bold">{productData.name}</h1>
-              <p>
-                {productData.rating.rate} of {productData.rating.count} reviews
-              </p>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                <ProductPrice
-                  value={Number(productData.price)}
-                  className="w-24 rounded-full bg-green-100 text-green-700 p-5 py-2"
-                />
-              </div>
-            </div>
-            <div className="mt-10">
-              <p className="font-semibold">Description</p>
-              <p>{productData.description}</p>
-            </div>
+            <Card className="shadow-lg border border-gray-200">
+              <CardContent className="p-6">
+                <h1 className="text-2xl font-bold text-gray-800">
+                  {productData.name}
+                </h1>
+                <div className="mt-4 mb-6">
+                  <p className="text-sm text-gray-600">
+                    {productData.description}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 mt-4">
+                  <span className="text-lg font-semibold text-gray-700">
+                    Price:
+                  </span>
+                  <span className="text-xl font-bold text-black-600  px-3 py-1 rounded-lg">
+                    ${productData.price}
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
           <Card>
             <CardContent className="p-4">
-              <div className="m-2 flex justify-between">
-                <div>Price</div>
+              <div className="flex justify-between mb-4">
+                <span className="font-medium">Price:</span>
                 <ProductPrice value={Number(productData.price)} />
               </div>
-              <div className="m-2 flex justify-between ">
-                <div>Status</div>
+              <div className="flex justify-between mb-4">
+                <span className="font-medium">Status:</span>
                 {productData.stock > 0 ? (
                   <Badge variant="outline">In Stock</Badge>
                 ) : (
@@ -71,14 +74,21 @@ const ProductDetailsPage = async ({
                 )}
               </div>
               {productData.stock > 0 && (
-                <div className="flex flex-center">
-                  <Button className="w-full">Add to Cart</Button>
-                </div>
+                <Button className="w-full mt-6">Add to Cart</Button>
               )}
             </CardContent>
           </Card>
         </div>
       </section>
+
+      <div className="mt-20">
+        <Button asChild>
+          <Link href="/produits">
+            <IoMdArrowRoundBack />
+            Back to Products
+          </Link>
+        </Button>
+      </div>
     </>
   );
 };
