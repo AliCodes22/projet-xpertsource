@@ -1,8 +1,14 @@
 # Application de Gadget Hub
 
-Bienvenue sur l'**Application de Gadget Hub**, une application web construite avec **React** et **Next.js**. Cette application récupère les données des produits via une API simulée et les affiche sous forme de cartes dynamiques, en utilisant **Material UI (MUI)** et **ShadCn** pour les composants. L'application illustre des fonctionnalités puissantes de **Next.js**, telles que le **rendu côté serveur (SSR)**, la **génération de pages statiques (SSG)**, et l'usage des **API Routes**.
+Bienvenue sur l'**Application de Gadget Hub**, une application web construite avec **React** et **Next.js**. Cette application récupère les données des produits via une API simulée et les affiche sous forme de cartes dynamiques, en utilisant **Material UI (MUI)** et **ShadCn** pour les composants. L'application illustre des fonctionnalités puissantes de **Next.js**, telles que le
+**rendu côté serveur (SSR)**, la **génération de pages statiques (SSG)**, et l'usage des **API Routes**.
 
-![Gadget Hub Screenshot](./screenshot.png)
+ <img width="1464" alt="Screenshot 2025-01-21 at 2 56 58 AM" src="https://github.com/user-attachments/assets/dae26a71-bbbf-4121-8bb2-8c72b222db0c" />
+<img width="1468" alt="Screenshot 2025-01-21 at 2 56 49 AM" src="https://github.com/user-attachments/assets/fb240410-969b-40ae-a197-6122558b32a7" />
+<img width="1466" alt="Screenshot 2025-01-21 at 2 56 36 AM" src="https://github.com/user-attachments/assets/aeb9fde4-632f-4766-b016-12d2a89c4a22" />
+
+
+
 
 ## Fonctionnalités
 
