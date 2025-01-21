@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 
+// definir metadata qui nous permet d'optimiser SEO pour l'application
 export const metadata: Metadata = {
   title: "Gadget Hub",
   description: "Trouver la meilleure technologie au meilleur prix",

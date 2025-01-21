@@ -13,7 +13,7 @@ import {
 } from "@mui/material"; // Material-UI components pour le style
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
-// Props pour le component Card
+// type pour les props du Card
 type CardProps = {
   id: number;
   name: string;
