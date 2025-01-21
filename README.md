@@ -12,9 +12,12 @@ Bienvenue sur l'**Application de Gadget Hub**, une application web construite av
 
 ## Fonctionnalités
 
-- **Récupération des données** : L'application récupère les données des produits depuis une API simulée.
-- **Affichage dynamique** : Les produits sont affichés dans des cartes, chacune contenant une image, le nom, la description et le prix.
-- **Navigation dynamique** : Les cartes permettent de naviguer vers une vue détaillée de chaque produit.
+- Récupère les données des produits depuis une API simulée.
+- Affiche les détails des produits dans des cartes Material UI.
+- Chaque carte produit montre une image, le nom, la description et le prix.
+- La carte permet aux utilisateurs de naviguer vers une vue détaillée pour chaque produit.
+- Le bouton de déconnexion redirige vers la page d'accueil (landing page).
+
   
 ## Installation
 
