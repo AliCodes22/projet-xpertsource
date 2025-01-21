@@ -10,12 +10,12 @@ pnpm dev
 bun dev
 ```
 
-Application de Gadget Hub
+# Application de Gadget Hub
 
 Il s'agit d'une application basée sur React/Next.js qui récupère les données des produits depuis une API et les affiche à l'aide de cartes Material UI et ShadCn pour la gestion des composants. L'application présente une sélection de produits et affiche des détails tels que le nom du produit, la description, le prix et l'image. L'application démontre certaines des puissantes fonctionnalités de Next.js, telles que le rendu côté serveur (SSR), la génération de pages statiques (SSG), et l'utilisation des API Routes.
 
 
-Fonctionnalités
+# Fonctionnalités
 Récupère les données des produits depuis une API simulée.
 Affiche les détails des produits dans des cartes Material UI.
 Chaque carte produit montre une image, le nom, la description et le prix.
@@ -60,10 +60,10 @@ imageMap.ts : Ce fichier utilitaire associe les noms des produits à leurs image
 
 utils.ts : Un fichier utilitaire contenant des fonctions d'aide comme cn (pour la gestion conditionnelle des classNames).
 
-Technologies Utilisées
+# Technologies Utilisées
 Next.js - Framework React pour créer des applications web statiques et dynamiques.
 React - Bibliothèque JavaScript pour la création d'interfaces utilisateurs.
-Material UI - Framework React populaire utilisé pour styliser les composants.
+Material UI et Shadcn - Framework React populaire utilisé pour styliser les composants.
 TypeScript - Superset de JavaScript qui ajoute du typage statique, améliorant la qualité du code et la productivité des développeurs.
 Tailwind CSS - Framework CSS utilitaire pour un développement rapide de l'interface utilisateur.
 
