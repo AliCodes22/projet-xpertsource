@@ -6,7 +6,28 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { imageMap } from "@/utils";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import Link from "next/link";
+
+// on genere le metadata pour des produits individuel
+export const generateMetadata = async ({ params }: Props): Metadata => {
+  const { id } = await params;
+  const product = await fetch(
+    `https://api.jsoning.com/mock/public/products/${id}`
+  ).then((res) => res.json());
+
+  const { name } = product;
+
+  return {
+    title: `${name}`,
+  };
+};
+
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
 const ProductDetailsPage = async ({
   params,

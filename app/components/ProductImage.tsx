@@ -8,7 +8,7 @@ const ProductImage = ({ image }: { image: string }) => {
         src={image}
         width={1000}
         height={1000}
-        alt="product image"
+        alt="tech product"
         className="min-h-[300px] object-cover
         object-center"
       />
