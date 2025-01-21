@@ -7,9 +7,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+// metadata
 export const metadata: Metadata = {
-  title: "XpertSource",
-  description: "Trouvez un courtier immobilier",
+  title: "Gadget Hub",
+  description: "Trouvez la meilleure technologie au meilleur prix",
 };
 
 export default function RootLayout({

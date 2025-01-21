@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { IconChalkboardUser } from "@/assets/icons/Logo";
 
+// Affiche le landing page
 const LandingPage = () => {
   const content = [
     {
@@ -21,7 +22,7 @@ const LandingPage = () => {
   ];
   return (
     <div className="bg-black text-neutral-50 min-h-screen flex flex-col">
-      {/* Hero Section */}
+      {/* Hero Section: Avec message de bienvenue*/}
       <section
         className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center"
         style={{

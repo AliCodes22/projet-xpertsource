@@ -1,5 +1,10 @@
 import Header from "../components/Header";
 
+export const metadata: Metadata = {
+  title: "Gadget Hub",
+  description: "Trouver la meilleure technologie au meilleur prix",
+};
+
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>

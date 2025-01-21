@@ -15,25 +15,31 @@ const ProductDetailsPage = async ({
     id: string;
   }>;
 }) => {
+  // on utilise la technique destruturing pour avoir le id
   const { id } = await params;
 
+  // si le id est superieur a 5, on retourne le hook notFound
+  // qui nous dirige vers la page not-found
+  if (Number(id) > 5) {
+    notFound();
+  }
+
+  // on fetch le produit en utilisant le id
   const product = await fetch(
     `https://api.jsoning.com/mock/public/products/${id}`
   );
 
+  // si le produit n'existe pas, on retourne notFound
   if (!product) {
     notFound();
   }
 
   const productData = await product.json();
 
-  console.log(productData);
-
   return (
     <>
       <section>
         <div className="grid grid-cols-1 md:grid-cols-5">
-          {/* Images Column */}
           <div className="col-span-2">
             <ProductImage image={imageMap[productData.name]} />
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; // Router pour pouvoir naviguer dans l'application
 
 import {
   Box,
@@ -10,9 +10,10 @@ import {
   CardActions,
   Button,
   CardMedia,
-} from "@mui/material";
+} from "@mui/material"; // Material-UI components pour le style
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
+// Props pour le component Card
 type CardProps = {
   id: number;
   name: string;
@@ -21,6 +22,7 @@ type CardProps = {
   price: number;
 };
 
+// Card cree avec Material-UI. Affiche details du produit incluant le nom, prix et description
 const MuiCard = ({ id, name, description, image, price }: CardProps) => {
   const router: AppRouterInstance = useRouter();
 

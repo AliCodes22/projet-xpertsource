@@ -1,8 +1,9 @@
-import { IconChalkboardUser } from "@/assets/icons/Logo";
-import { FaSignOutAlt } from "react-icons/fa";
+import { IconChalkboardUser } from "@/assets/icons/Logo"; // Icone representant le logo
+import { FaSignOutAlt } from "react-icons/fa"; // Icone pour le bouton deconnexion
 
-import Link from "next/link";
+import Link from "next/link"; // Link pour la navigation
 
+// Menu avec navigation sur les ecrans desktop et mobiles
 const Header = () => {
   return (
     <header className="bg-black">
