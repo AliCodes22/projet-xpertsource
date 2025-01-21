@@ -29,11 +29,11 @@ Assurez-vous que **Node.js** et un gestionnaire de paquets comme **npm**, **yarn
 Utilisez la commande suivante en fonction de votre gestionnaire de paquets préféré :
 
 npm install
-# ou
+ou
 yarn install
-# ou
+ou
 pnpm install
-# ou
+ou
 bun install
 
 3. **Démarrer l'application**
@@ -41,14 +41,20 @@ bun install
 Après avoir installé les dépendances, lancez le serveur de développement :
 
 npm run dev
-# ou
+ou
 yarn dev
-# ou
+ou
 pnpm dev
-# ou
+ou
 bun dev
 
 Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir l'application en action.
+
+# Routes
+
+- **`/produits`** : La page d'accueil qui affiche tous les produits récupérés depuis l'API. Chaque produit est affiché sous forme de carte, avec son nom, description, prix et image.
+- **`/produits/[id]`** : La page de détail d'un produit spécifique, accessible en cliquant sur une carte. Cette page affiche plus d'informations sur le produit en fonction de son `id`.
+- **`/categories`** : Une page vide pour le moment, mais elle peut être utilisée pour afficher des catégories de produits dans le futur.
 
 ## Explication des Composants
 
