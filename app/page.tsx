@@ -6,18 +6,18 @@ import { IconChalkboardUser } from "@/assets/icons/Logo";
 const LandingPage = () => {
   const content = [
     {
-      title: "Premium Quality",
+      title: "Qualité Premium",
       description:
-        "Our products are sourced from trusted brands ensuring top-notch quality.",
+        "Nos produits proviennent de marques de confiance garantissant une qualité irréprochable.",
     },
     {
-      title: "Fast Delivery",
-      description: "Enjoy swift and reliable delivery to your doorstep.",
+      title: "Livraison rapide",
+      description: "Profitez d'une livraison rapide et fiable à votre porte.",
     },
     {
-      title: "Unmatched Support",
+      title: "Support inégalé",
       description:
-        "Our support team is available 24/7 to assist with your needs.",
+        "Notre équipe d'assistance est disponible 24h/24 et 7j/7 pour répondre à vos besoins.",
     },
   ];
   return (
@@ -33,17 +33,16 @@ const LandingPage = () => {
         <div className="relative z-10 max-w-4xl text-center">
           <IconChalkboardUser height={60} width={60} className="mx-auto mb-4" />
           <h1 className="text-5xl font-extrabold leading-tight">
-            Welcome to Our Store
+            Bienvenue chez Gadget Hub
           </h1>
           <p className="mt-4 text-lg">
-            Discover the best products in{" "}
-            <span className="text-gray-400">one place</span>. High quality,
-            unbeatable prices.
+            Decouvrez les meilleur produits en{" "}
+            <span className="text-gray-400">une place de</span> Haute qualité
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/produits">
               <Button className="px-6 py-3 text-lg hover:bg-neutral-600">
-                Shop Now
+                Magasinez maintenant
               </Button>
             </Link>
             <Link href="/categories">
@@ -58,7 +57,7 @@ const LandingPage = () => {
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+          <h2 className="text-3xl font-bold mb-6">Pourquoi Gadget Hub?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {content.map((feature, index) => (
               <div key={index} className="p-6 bg-black/80 rounded-lg shadow-md">
@@ -73,19 +72,19 @@ const LandingPage = () => {
       {/* Call to Action Section */}
       <section className="py-16 bg-black">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-extrabold mb-6">Join Us Today</h2>
-          <p className="text-lg text-gray-400">
-            Sign up now and get exclusive offers on your first purchase!
-          </p>
+          <h2 className="text-4xl font-extrabold mb-6">
+            Joignez-nous aujourd'hui!
+          </h2>
+          <p className="text-lg text-gray-400">Enregistrez maintenant!</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link href="/">
               <Button className="px-8 py-3 text-lg hover:bg-neutral-600">
-                Sign In
+                Connexion
               </Button>
             </Link>
             <Link href="/">
               <Button className="px-8 py-3 text-lg hover:bg-neutral-600">
-                Sign Up
+                Enregistrez vous
               </Button>
             </Link>
           </div>

@@ -40,7 +40,7 @@ const Header = () => {
               className="mx-3 text-gray-800 hover:text-gray-600 flex items-center"
             >
               <FaSignOutAlt className="inline mr-1 text-neutral-50" />
-              <span className="text-neutral-50">Sign Out</span>
+              <span className="text-neutral-50">Deconnexion</span>
             </Link>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Header = () => {
             className="block rounded-md px-3 py-2 text-base font-medium text-neutral-50 hover:bg-gray-700 hover:text-white"
           >
             <FaSignOutAlt className="inline mr-2 text-neutral-50" />
-            Sign Out
+            Deconnexion
           </Link>
         </div>
       </div>

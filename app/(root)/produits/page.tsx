@@ -1,5 +1,8 @@
+import { DialogDemo } from "@/app/components/Dialog";
 import MuiCard from "@/app/components/MuiCard";
+import { Button } from "@/components/ui/button";
 import { imageMap } from "@/utils";
+import { Plus } from "lucide-react";
 
 // Definir le type pour le produit
 type Product = {
@@ -23,24 +26,30 @@ const HomePage = async (): Promise<JSX.Element> => {
     .filter((item) => item.name !== "1080p Webcam");
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {halfData.map((item: Product) => {
-        // utilise la technique destructuring pour avoir les props necessaires de l'item
-        const { id, name, description, image, price } = item;
+    <>
+      <div className="">
+        <DialogDemo action="Ajouter" />
+      </div>
+      <hr />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        {halfData.map((item: Product) => {
+          // utilise la technique destructuring pour avoir les props necessaires de l'item
+          const { id, name, description, image, price } = item;
 
-        // On retourne la carte MuiCard pour chacun des articles
-        return (
-          <MuiCard
-            key={id}
-            name={name}
-            description={description}
-            price={price}
-            id={id}
-            image={imageMap[item.name]}
-          />
-        );
-      })}
-    </div>
+          // On retourne la carte MuiCard pour chacun des articles
+          return (
+            <MuiCard
+              key={id}
+              name={name}
+              description={description}
+              price={price}
+              id={id}
+              image={imageMap[item.name]}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 };
 

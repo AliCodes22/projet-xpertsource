@@ -8,6 +8,7 @@ import { imageMap } from "@/utils";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
+import { DialogDemo } from "@/app/components/Dialog";
 
 // on genere le metadata pour des produits individuel
 export const generateMetadata = async ({ params }: Props): Metadata => {
@@ -41,7 +42,7 @@ const ProductDetailsPage = async ({
 
   // si le id est superieur a 5, on retourne le hook notFound
   // qui nous dirige vers la page not-found
-  if (Number(id) > 5) {
+  if (Number(id) > 7) {
     notFound();
   }
 
@@ -77,7 +78,7 @@ const ProductDetailsPage = async ({
                 </div>
                 <div className="flex items-center gap-2 mt-4">
                   <span className="text-lg font-semibold text-gray-700">
-                    Price:
+                    Prix:
                   </span>
                   <span className="text-xl font-bold text-black-600  px-3 py-1 rounded-lg">
                     ${productData.price}
@@ -89,20 +90,16 @@ const ProductDetailsPage = async ({
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between mb-4">
-                <span className="font-medium">Price:</span>
+                <span className="text-lg">Prix:</span>
                 <ProductPrice value={Number(productData.price)} />
               </div>
-              <div className="flex justify-between mb-4">
-                <span className="font-medium">Status:</span>
-                {productData.stock > 0 ? (
-                  <Badge variant="outline">In Stock</Badge>
-                ) : (
-                  <Badge variant="destructive">Out of Stock</Badge>
-                )}
+
+              <div>
+                <DialogDemo action="Modifier" />
               </div>
-              {productData.stock > 0 && (
-                <Button className="w-full mt-6">Add to Cart</Button>
-              )}
+              <Button className=" mt-6 bg-red-500 hover:bg-red-500 hover:bg-opacity-80">
+                Supprimer
+              </Button>
             </CardContent>
           </Card>
         </div>
@@ -112,7 +109,7 @@ const ProductDetailsPage = async ({
         <Button asChild>
           <Link href="/produits">
             <IoMdArrowRoundBack />
-            Back to Products
+            Retour aux produits
           </Link>
         </Button>
       </div>
