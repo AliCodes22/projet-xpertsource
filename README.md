@@ -1,12 +1,22 @@
 # Application de Gadget Hub
 
-Bienvenue sur l'**Application de Gadget Hub**, une application web construite avec **React** et **Next.js**. Cette application récupère les données des produits via une API simulée et les affiche sous forme de cartes dynamiques, en utilisant **Material UI (MUI)** et **ShadCn** pour les composants. L'application illustre des fonctionnalités puissantes de **Next.js**, telles que le
-**rendu côté serveur (SSR)**, la **génération de pages statiques (SSG)**, et l'usage des **API Routes**.
+Bienvenue sur l'**Application de Gadget Hub**, une application web construite avec **React** et **Next.js**. Cette application sert de tableau de bord pour la gestion des produits.
+Cette application récupère les données des produits via une API simulée et les affiche sous forme de cartes dynamiques, en utilisant **Material UI (MUI)** et **ShadCn** pour les composants. L'application illustre des fonctionnalités puissantes de **Next.js**, telles que le
+**rendu côté serveur (SSR)**, la **génération de pages statiques (SSG)**, et l'usage des **App Router**.
 
- <img width="1464" alt="Screenshot 2025-01-21 at 2 56 58 AM" src="https://github.com/user-attachments/assets/dae26a71-bbbf-4121-8bb2-8c72b222db0c" />
-<img width="1468" alt="Screenshot 2025-01-21 at 2 56 49 AM" src="https://github.com/user-attachments/assets/fb240410-969b-40ae-a197-6122558b32a7" />
-<img width="1466" alt="Screenshot 2025-01-21 at 2 56 36 AM" src="https://github.com/user-attachments/assets/aeb9fde4-632f-4766-b016-12d2a89c4a22" />
+<img width="1466" alt="Screenshot 2025-01-22 at 9 11 39 PM" src="https://github.com/user-attachments/assets/48515973-af54-409f-99cf-f3d9b8b537d3" />
 
+
+<img width="1467" alt="Screenshot 2025-01-22 at 9 11 52 PM" src="https://github.com/user-attachments/assets/7b88b360-0873-453b-925c-a1967b652add" />
+
+
+
+<img width="1464" alt="Screenshot 2025-01-22 at 8 58 07 PM" src="https://github.com/user-attachments/assets/d5d35fed-63ae-4007-b0b8-90530091bb79" />
+
+
+<img width="1423" alt="Screenshot 2025-01-22 at 8 58 16 PM" src="https://github.com/user-attachments/assets/ca2d10d9-5ea0-42ed-a90e-1832feb7c7d5" />
+
+<img width="1461" alt="Screenshot 2025-01-22 at 9 33 38 PM" src="https://github.com/user-attachments/assets/03a490e6-c802-459f-a8c1-0232e03e95e9" />
 
 
 
@@ -71,9 +81,9 @@ Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir l'applica
 
 - MuiCard.tsx : Représente une carte produit, qui inclut une image, le nom, la description et le prix du produit.
 
-- imageMap.ts : Ce fichier utilitaire associe le nom des produits à leurs images respectives pour un rendu dynamique.
+- Header.tsx : Un composant de menu de navigation qui est affiché sur les écrans desktop et mobiles. Il utilise Link de Next.js pour naviguer entre les pages et affiche le logo et le bouton de déconnexion
 
-- utils.ts : Contient des fonctions utilitaires, comme cn, pour gérer conditionnellement les classNames.
+- DialogDemo.tsx : Composant utilisé pour afficher un dialogue permettant d'ajouter ou de modifier un produit. Il utilise des composants comme Button, Dialog, Input, Label, et Textarea de la bibliothèque ShadCn pour une interface élégante.
 
 ## Technologies Utilisées
 
@@ -82,6 +92,21 @@ Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir l'applica
 - Material UI et ShadCn : Frameworks de composants React permettant de créer des interfaces utilisateur élégantes et accessibles.
 - TypeScript : Superset de JavaScript qui permet un typage statique et améliore la robustesse du code.
 - Tailwind CSS : Framework CSS utilitaire pour un développement rapide et réactif de l'interface utilisateur.
+
+
+## Extension
+
+## Gestion des Produits via API
+Bien que l'application ne dispose pas actuellement d'une API pour la gestion des produits, elle est conçue pour être extensible et peut facilement être connectée à une API pour :
+
+Récupérer, ajouter, modifier et supprimer des produits.
+
+## Authentification
+L'application peut intégrer une authentification pour sécuriser l'accès aux fonctionnalités, offrant la possibilité de :
+
+Gérer l'inscription, la connexion et la déconnexion des utilisateurs.
+Restreindre l'accès aux fonctionnalités sensibles pour les utilisateurs authentifiés.
+Cette architecture permet une évolutivité facile, garantissant que l'application pourra intégrer ces fonctionnalités à mesure de son développement.
 
 
 
