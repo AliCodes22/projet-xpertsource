@@ -67,7 +67,7 @@ pnpm dev
 ou
 bun dev
 
-Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir l'application en action.
+Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir l'application en action. Cliquez sur <<Explorez maintenant>>
 
 # Routes
 
