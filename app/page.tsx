@@ -42,7 +42,7 @@ const LandingPage = () => {
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/produits">
               <Button className="px-6 py-3 text-lg hover:bg-neutral-600">
-                Magasinez maintenant
+                Explorez maintenant
               </Button>
             </Link>
             <Link href="/categories">
