@@ -93,6 +93,14 @@ Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir l'applica
 - TypeScript : Superset de JavaScript qui permet un typage statique et améliore la robustesse du code.
 - Tailwind CSS : Framework CSS utilitaire pour un développement rapide et réactif de l'interface utilisateur.
 
+## Linting et Formatage de Code
+
+- Ce projet utilise **ESLint** pour assurer la qualité du code et **Prettier** pour le formatage automatique.
+
+## Exécution des outils de Linting
+Vous pouvez exécuter ESLint pour vérifier la qualité du code en utilisant la commande suivante :
+
+npm run lint
 
 ## Extension
 
@@ -107,6 +115,15 @@ L'application peut intégrer une authentification pour sécuriser l'accès aux f
 Gérer l'inscription, la connexion et la déconnexion des utilisateurs.
 Restreindre l'accès aux fonctionnalités sensibles pour les utilisateurs authentifiés.
 Cette architecture permet une évolutivité facile, garantissant que l'application pourra intégrer ces fonctionnalités à mesure de son développement.
+
+## Gestion de l'État Global
+L'application peut facilement être étendue pour inclure un gestionnaire d'état global, permettant de partager des données entre les composants à travers l'application. Vous pourriez envisager d'utiliser :
+
+Redux : Pour une gestion d'état plus centralisée et évolutive.
+Context API : Pour une solution plus simple et légère pour gérer l'état sans besoin de bibliothèques supplémentaires.
+Zustand : Pour un état global plus léger et sans boilerplate.
+Cette architecture permet une évolutivité facile, garantissant que l'application pourra intégrer ces fonctionnalités à mesure de son développement.
+
 
 
 
